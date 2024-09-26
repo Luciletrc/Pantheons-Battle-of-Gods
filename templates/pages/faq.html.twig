@@ -1,0 +1,36 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}Foire aux questions{% endblock %}
+
+{% block body %}
+<h1 class="text-center text-white pt-4">Besoin d'aide ?</h1>
+
+<div class="container p-4">
+    <div class="input-group">
+        <input type="search" class="form-control" placeholder="Trouver les réponses à vos questions" aria-label="Trouver les réponses à vos questions" aria-describedby="button-addon2">
+        <button class="btn btn-outline-primary" type="button" id="button-addon2"><i class="bi bi-search text-white"></i></button>
+    </div>
+</div>
+
+<div class="container pt-4">
+    <div class="list-group">
+        <a class="list-group-item list-group-item-action" data-bs-toggle="collapse" href="#collapseQ1" role="button" aria-expanded="false" aria-controls="collapseQ1">
+          <h5><b><i>Question : Que se passe-t-il si un joueur décide d'utiliser le pouvoir de l'un de ses Dieux pour infliger des dégâts, alors que celui-ci possède un marqueur Sortilège ?</i></b></h5>
+          <p class="collapse" id="collapseQ1" style="color: inherit"><b>Réponse : </b><i>Les Dégâts produits par les Pouvoirs des Dieux ne prennent jamais en compte les modificateurs de dégâts (dans un sens ou dans l'autre), donc ces dégâts ne sont pas modifiés. Toutefois, le Dieu subit 1 Dégât pour chaque marqueur Sortilège dont il est doté car il inflige bien des dégâts lors de son activation. Le, ou les marqueurs sont donc ensuite retirés.</i></p>
+        </a>
+        <a class="list-group-item list-group-item-action" data-bs-toggle="collapse" href="#collapseQ2" role="button" aria-expanded="false" aria-controls="collapseQ2">
+          <h5><b><i>Question : Lors de son Activation, un joueur est-il obligé de jouer des cartes Action ou bien d'utiliser le Pouvoir d'un de ses Dieux ?</i></b></h5>
+          <p class="collapse" id="collapseQ2" style="color: inherit"><b>Réponse : </b><i>Non ! S'il en est incapable, ne le souhaite pas ou bien qu'aucune carte Action qu'il a encore en main ne présente pour lui d'intérêt à être jouée durant une Activation, le joueur peut décider de « passer son tour » et ne rien entreprendre avec son Dieu.</i></p>
+        </a>
+        <a class="list-group-item list-group-item-action" data-bs-toggle="collapse" href="#collapseQ3" role="button" aria-expanded="false" aria-controls="collapseQ3">
+          <h5><b><i>Question : Les Modificateurs de Dégâts sont-ils pris en compte avant ou après l'application des Dégâts sur un Dieu ? Par exemple dans le cas où le Dieu ciblé est affecté par l'effet de la carte "Clairvoyance", et que le Dieu produisant les Dégâts, est lui-même, sujet à un ou plusieurs Modificateurs de Dégâts ?</i></b></h5>
+          <p class="collapse" id="collapseQ3" style="color: inherit"><b>Réponse : </b><i>Après ! Les Modificateurs sont toujours appliqués lorsqu'un Dieu subit des Dégâts, et non sur les Dégâts produits par un Dieu. Si une source de Dégâts est ignorée (par exemple grâce à l'effet de la carte "Clairvoyance"), les Dégâts ne sont donc pas considérés comme étant subis par le Dieu ciblé, et donc aucun Modificateur de Dégâts n'est pris en compte. En d'autres termes, la carte "Clairvoyance" a pour effet de décaler l'application des Modificateurs de Dégâts sur la seconde Source de Dégâts infligée par un Dieu.</i></p>
+        </a>
+        <a class="list-group-item list-group-item-action" data-bs-toggle="collapse" href="#collapseQ4" role="button" aria-expanded="false" aria-controls="collapseQ4">
+          <h5><b><i>Question : Un Dieu peut-il infliger ou subir un montant de Dégâts égal à zéro ?</i></b></h5>
+          <p class="collapse" id="collapseQ4" style="color: inherit"><b>Réponse : </b><i>Oui ! Bien que cela puisse à première vue paraître étrange. Un Dieu peut s'il le souhaite et pour plusieurs raisons, comme par exemple les effets des Modificateurs de Dégâts, se voir n'infliger aucun Dégât. Toutefois, même si la Source de Dégâts est égale à zéro, elle est toute de même à prendre en compte dans l'application des Dégâts.<br/><br/>La seule situation dans laquelle un Dieu n'est pas « autorisé » à jouer de carte Action pour tenter d'infliger des Dégâts, est lorsque ce Dieu possède une valeur de Puissance nulle et non-modifiée (par un ou plusieurs Modificateurs de Dégâts). Par exemple si un Dieu possède une valeur de Puissance Psychique égale à zéro, et qu'aucun Modificateur qui lui permettrait tout de même d'infliger des Dégâts ne s'applique, alors ce Dieu n'est pas autorisé à jouer la carte "Frappe Psychique".</i></p>
+        </a>
+    </div>
+</div>
+
+{% endblock %}

@@ -2,10 +2,8 @@
 
 namespace App\Controller;
 
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class FrontController extends AbstractController
@@ -18,35 +16,63 @@ class FrontController extends AbstractController
         ]);
     }
 
-    // add new route to access to my CV page
-    #[Route('/documents/my-cv/', name: 'app_my_cv', methods: ['GET'], defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
-    public function cv(): Response
+    #[Route('/contact', name: 'app_contact', defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
+    public function contact(): Response
     {
-        return $this->render('front/my-cv.html.twig');
+        return $this->render('pages/contact.html.twig');
     }
 
-    // add new route to access to my CV page
-    #[Route('/documents/my-covering-letter/', name: 'app_my_covering_letter', methods: ['GET'], defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
-    public function coverLetter(): Response
+    #[Route('/pantheons', name: 'app_pantheons', defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
+    public function pantheons(): Response
     {
-        return $this->render('front/my-covering-letter.html.twig');
+        return $this->render('pages/pantheons.html.twig');
     }
 
-    // create a profile page
-    #[Route('/profile/', name: 'app_profile', methods: ['GET', 'POST'], defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
-    public function profile(TranslatorInterface $translator): Response
+    #[Route('/boutique', name: 'app_boutique', defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
+    public function boutique(): Response
     {
-        $user = $this->getUser();
-        $isVerified = $user->isVerified() ? true : false;
+        return $this->render('pages/boutique.html.twig');
+    }
 
-        $message = $translator->trans('Your account is not verified. Please check your email to verify your account.');
-        $linkLabel = $translator->trans('Resend verification email');
+    #[Route('/Pantheon-grec', name: 'app_pgrec', defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
+    public function pgrec(): Response
+    {
+        return $this->render('pages/pantheon-grec.html.twig');
+    }
 
-        // if is not verified, add flash message
-        if (!$isVerified) {
-            $this->addFlash('warning', $message . '&nbsp;<a href="/resend-verification-link/'.$user->getId().'/">' . $linkLabel . '</a>');
-        }
+    #[Route('/Pantheon-meso', name: 'app_pmeso', defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
+    public function pmeso(): Response
+    {
+        return $this->render('pages/pantheon-meso.html.twig');
+    }
 
-        return $this->render('front/profile.html.twig');
+    #[Route('/Pantheon-egypt', name: 'app_pegypt', defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
+    public function pegypt(): Response
+    {
+        return $this->render('pages/pantheon-egypt.html.twig');
+    }
+
+    #[Route('/Pantheon-slave', name: 'app_pslave', defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
+    public function pslave(): Response
+    {
+        return $this->render('pages/pantheon-slave.html.twig');
+    }
+
+    #[Route('/faq', name: 'app_faq', defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
+    public function faq(): Response
+    {
+        return $this->render('pages/faq.html.twig');
+    }
+
+    #[Route('/maj', name: 'app_maj', defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
+    public function maj(): Response
+    {
+        return $this->render('pages/maj.html.twig');
+    }
+
+    #[Route('/actualites', name: 'app_actualites', defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
+    public function actualites(): Response
+    {
+        return $this->render('pages/actualites.html.twig');
     }
 }
