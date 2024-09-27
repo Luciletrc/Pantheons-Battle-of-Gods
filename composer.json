@@ -23,7 +23,9 @@
         "symfony/console": "^7.1",
         "symfony/twig-bundle": "^7.1",
         "symfony/http-client": "^7.1",
-        "symfony/stimulus-bundle": "^2.20"
+        "symfony/stimulus-bundle": "^2.20",
+        "php": "^8.2.12",
+        "symfony/apache-pack": "^1.0"
     },
     "config": {
         "allow-plugins": {
