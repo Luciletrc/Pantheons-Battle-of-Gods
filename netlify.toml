@@ -1,5 +1,5 @@
 [build.environment]
-PHP_VERSION = "8.2"
+  PHP_VERSION = "8.2"
 
 [build]
   publish = "public"
@@ -9,3 +9,4 @@ PHP_VERSION = "8.2"
   from = "/*"
   to = "/index.php"
   status = 200
+  force = true
