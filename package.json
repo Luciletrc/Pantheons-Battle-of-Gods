@@ -2,7 +2,7 @@
   "name": "pantheons",
   "version": "1.0.0",
   "description": "",
-  "main": "index.php",
+  "main": "./public/index.php",
   "scripts": {
     "dev": "encore dev",
     "build": "encore production"
