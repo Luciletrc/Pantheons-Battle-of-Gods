@@ -2,4 +2,10 @@
 PHP_VERSION = "8.2"
 
 [build]
-publish = "public"
+  publish = "public"
+  command = "composer install && php bin/console cache:clear --env=prod --no-debug"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.php"
+  status = 200
