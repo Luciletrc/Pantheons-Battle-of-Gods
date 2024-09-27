@@ -5,8 +5,7 @@
   publish = "public"
   command = "composer install && php bin/console cache:clear --env=prod --no-debug"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.php"
-  status = 200
-  force = true
+[[headers]]
+  for = "/*.php"
+  [headers.values]
+    Content-Type = "application/x-httpd-php"
