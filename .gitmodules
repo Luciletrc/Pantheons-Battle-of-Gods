@@ -1,0 +1,3 @@
+[submodule "vendor/webpack-encore-bundle"]
+  path = vendor/webpack-encore-bundle
+  url = https://github.com/symfony/webpack-encore-bundle
