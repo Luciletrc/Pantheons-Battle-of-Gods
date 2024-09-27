@@ -3,4 +3,3 @@
 
 [build]
   base = "public/"
-  publish = "templates/"
