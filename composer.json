@@ -1,6 +1,6 @@
 {
     "require": {
-        "php": "^8.2.12",
+        "php": "^8.2",
         "symfony/framework-bundle": "^7.1.5",
         "twig/twig": "^3.14",
         "doctrine/orm": "^3.2.2",
