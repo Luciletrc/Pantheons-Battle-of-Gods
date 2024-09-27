@@ -1,3 +1,5 @@
 [submodule "docs/.shared"]
 	path = docs/.shared
 	url = https://github.com/amphp/amphp.github.io
+[submodule "vendor/webpack-encore-bundle"]
+  path = vendor/webpack-encore-bundle
