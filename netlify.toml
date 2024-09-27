@@ -2,10 +2,5 @@
   PHP_VERSION = "8.2"
 
 [build]
-  publish = "public"
-  command = "composer install && php bin/console cache:clear --env=prod --no-debug"
-
-[[headers]]
-  for = "/index.php"
-  [headers.values]
-    Content-Type = "application/x-httpd-php"
+  base = "public/"
+  publish = "templates/"
