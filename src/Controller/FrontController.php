@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class FrontController extends AbstractController
 {
     #[Route('/', name: 'app_home', defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
-    public function home(): Response
+    public function index(): Response
     {
         return $this->render('front/home.html.twig', [
             'controller_name' => 'FrontController',
