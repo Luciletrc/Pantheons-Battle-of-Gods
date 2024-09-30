@@ -25,7 +25,10 @@
         "symfony/twig-bundle": "^7.1.5",
         "symfony/http-client": "^7.1.5",
         "symfony/stimulus-bundle": "^2.20",
-        "symfony/apache-pack": "^1.0.1"
+        "symfony/apache-pack": "^1.0.1",
+        "symfony/requirements-checker": "^2.0",
+        "monolog/monolog": "^3.7",
+        "phpunit/php-timer": "^5.0"
     },
     "config": {
         "allow-plugins": {

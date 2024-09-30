@@ -17,6 +17,7 @@ return array(
     'Symfony\\UX\\LiveComponent\\' => array($vendorDir . '/symfony/ux-live-component/src'),
     'Symfony\\UX\\Autocomplete\\' => array($vendorDir . '/symfony/ux-autocomplete/src'),
     'Symfony\\Runtime\\Symfony\\Component\\' => array($vendorDir . '/symfony/runtime/Internal'),
+    'Symfony\\Requirements\\' => array($vendorDir . '/symfony/requirements-checker/src'),
     'Symfony\\Polyfill\\Php83\\' => array($vendorDir . '/symfony/polyfill-php83'),
     'Symfony\\Polyfill\\Php81\\' => array($vendorDir . '/symfony/polyfill-php81'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
