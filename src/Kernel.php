@@ -37,14 +37,6 @@ class Kernel extends BaseKernel
         $loader->load($confDir.'/{services}_'.$this->environment.'.yaml', 'glob');
     }
 
-    protected function configureRoutes(RouteCollectionBuilder $routes): void
-    {
-        $confDir = $this->getProjectDir().'/config';
-
-        $routes->import($confDir.'/{routes}/*.yaml', '/', 'glob');
-        $routes->import($confDir.'/{routes}/'.$this->environment.'/*.yaml', '/', 'glob');
-    }
-
     // Add this method to implement the abstract method from BaseKernel
     public function registerContainerConfiguration(LoaderInterface $loader): void
     {
