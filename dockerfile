@@ -22,8 +22,8 @@ COPY . /var/www/symfony
 # Copie uniquement le contenu du répertoire public vers la racine du serveur Apache
 RUN cp -r /var/www/symfony/public/* /var/www/html
 
-# Copie le dossier config directement dans /var/www pour que le chemin soit correct
-RUN cp -r /var/www/symfony/config /var/www/config
+# Copie le dossier config directement dans /var/www/symfony
+COPY ./config /var/www/symfony/config
 
 # Crée les répertoires var dans /var/www/symfony et /var/www/html (si nécessaire)
 RUN mkdir -p /var/www/symfony/var /var/www/html/var /var/www/src
