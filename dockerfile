@@ -41,8 +41,8 @@ RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-interaction --optimize-auto
 RUN mkdir -p /var/www/symfony/var/cache /var/www/symfony/var/log /var/www/html/var
 
 # Définit les permissions pour le dossier cache, logs, vendor, templates, et var
-RUN chown -R www-data:www-data /var/www/symfony/var /var/www/symfony/vendor /var/www/symfony/templates /var/www/html/var /var/www/config /var/www/src
-RUN chmod -R 775 /var/www/symfony/var /var/www/symfony/vendor /var/www/symfony/templates /var/www/html/var /var/www/config /var/www/src
+RUN chown -R www-data:www-data /var/www/symfony/var /var/www/symfony/vendor /var/www/symfony/templates /var/www/html/var /var/www/symfony/config /var/www/src
+RUN chmod -R 775 /var/www/symfony/var /var/www/symfony/vendor /var/www/symfony/templates /var/www/html/var /var/www/symfony/config /var/www/src
 
 # Expose le port 80 pour Apache
 EXPOSE 80
