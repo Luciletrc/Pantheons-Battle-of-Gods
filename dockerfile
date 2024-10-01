@@ -19,8 +19,11 @@ COPY ./000-default.conf /etc/apache2/sites-available/000-default.conf
 # Copie tout le projet dans le répertoire de travail du conteneur
 COPY . /var/www/symfony
 
-# Copie uniquement le répertoire public vers la racine du serveur Apache
+# Copie uniquement le contenu du répertoire public vers la racine du serveur Apache
 RUN cp -r /var/www/symfony/public/* /var/www/html
+
+# Copie le dossier config directement dans /var/www pour que le chemin soit correct
+RUN cp -r /var/www/symfony/config /var/www/config
 
 # Crée les répertoires var dans /var/www/symfony et /var/www/html (si nécessaire)
 RUN mkdir -p /var/www/symfony/var /var/www/html/var
@@ -38,8 +41,8 @@ RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-interaction --optimize-auto
 RUN mkdir -p /var/www/symfony/var/cache /var/www/symfony/var/log /var/www/html/var
 
 # Définit les permissions pour le dossier cache, logs, vendor, templates, et var
-RUN chown -R www-data:www-data /var/www/symfony/var /var/www/symfony/vendor /var/www/symfony/templates /var/www/html/var
-RUN chmod -R 775 /var/www/symfony/var /var/www/symfony/vendor /var/www/symfony/templates /var/www/html/var
+RUN chown -R www-data:www-data /var/www/symfony/var /var/www/symfony/vendor /var/www/symfony/templates /var/www/html/var /var/www/config
+RUN chmod -R 775 /var/www/symfony/var /var/www/symfony/vendor /var/www/symfony/templates /var/www/html/var /var/www/config
 
 # Expose le port 80 pour Apache
 EXPOSE 80
