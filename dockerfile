@@ -52,6 +52,8 @@ RUN mkdir -p /var/www/symfony/var/cache /var/www/symfony/var/log /var/www/html/v
 # Définit les permissions pour le dossier cache, logs, vendor, templates, var et src
 RUN chown -R www-data:www-data /var/www/symfony/var /var/www/symfony/vendor /var/www/symfony/templates /var/www/html/var /var/www/config /var/www/src
 RUN chmod -R 775 /var/www/symfony/var /var/www/symfony/vendor /var/www/symfony/templates /var/www/html/var /var/www/config /var/www/src
+RUN chmod 644 /var/www/config/bundles.php /var/www/config/bootstrap.php
+
 
 # Expose le port 80 pour Apache
 EXPOSE 80
