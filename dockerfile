@@ -20,7 +20,7 @@ COPY ./000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY . /var/www/symfony
 
 # Copie uniquement le répertoire public vers la racine du serveur Apache
-RUN cp -r /var/www/symfony/public /var/www/html
+RUN cp -r /var/www/symfony/public/* /var/www/html
 
 # Crée les répertoires var dans /var/www/symfony et /var/www/html (si nécessaire)
 RUN mkdir -p /var/www/symfony/var /var/www/html/var
