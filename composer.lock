@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ba2ba18c60630240f4100e256048521",
+    "content-hash": "7300cb6cac6f82fa82b0a1ca4cf5669c",
     "packages": [
         {
             "name": "amphp/amp",
@@ -3160,6 +3160,61 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.3.0"
             },
             "time": "2024-09-29T13:56:26+00:00"
+        },
+        {
+            "name": "opctim/symfony-docker",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/opctim/symfony-docker.git",
+                "reference": "73479ca6a4271d50aa3c1a62b3621798608006d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/opctim/symfony-docker/zipball/73479ca6a4271d50aa3c1a62b3621798608006d1",
+                "reference": "73479ca6a4271d50aa3c1a62b3621798608006d1",
+                "shasum": ""
+            },
+            "type": "template",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gerardo Fernández Moreno",
+                    "email": "gerardo@latteandcode.com",
+                    "homepage": "https://youtube.com/c/latteandcode",
+                    "role": "Developer"
+                },
+                {
+                    "name": "@opctim / Tim Nelles",
+                    "email": "info@nelles-websolutions.de",
+                    "homepage": "https://github.com/opctim",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This is a complete stack for running Symfony 6 with PHP-FPM 8.1 and MySQL 8 into Docker containers using docker-compose tool.",
+            "homepage": "https://github.com/opctim/symfony-docker",
+            "keywords": [
+                "docker",
+                "framework",
+                "mariadb",
+                "mysql",
+                "nginx",
+                "php",
+                "php8",
+                "php8.1",
+                "project",
+                "setup",
+                "symfony",
+                "symfony6",
+                "template"
+            ],
+            "support": {
+                "source": "https://github.com/opctim/symfony-docker/tree/1.0.0"
+            },
+            "time": "2022-12-13T15:13:00+00:00"
         },
         {
             "name": "phar-io/manifest",
