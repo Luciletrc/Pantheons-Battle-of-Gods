@@ -25,11 +25,12 @@ WORKDIR /var/www/symfony
 # Installe Composer
 COPY --from=composer:2.4 /usr/bin/composer /usr/bin/composer
 
-# Installe les dépendances PHP avec Composer
-RUN composer install --no-interaction --optimize-autoloader --no-dev
+# Installe les dépendances PHP avec Composer en tant que superutilisateur
+RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-interaction --optimize-autoloader --no-dev
 
 # Définit les permissions pour le dossier cache et log
 RUN chown -R www-data:www-data /var/www/symfony/var
+RUN chown -R www-data:www-data /var/www/symfony/vendor
 RUN chmod -R 775 /var/www/symfony/var
 
 # Expose le port 80 pour Apache
