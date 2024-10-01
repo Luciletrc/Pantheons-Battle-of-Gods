@@ -22,9 +22,6 @@ COPY . /var/www/symfony
 # Copie uniquement le répertoire public vers la racine du serveur Apache
 RUN cp -r /var/www/symfony/public /var/www/html
 
-# Copie le répertoire templates dans le répertoire Symfony
-RUN cp -r /var/www/symfony/templates /var/www/symfony/templates
-
 # Crée les répertoires var dans /var/www/symfony et /var/www/html (si nécessaire)
 RUN mkdir -p /var/www/symfony/var /var/www/html/var
 
