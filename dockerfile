@@ -25,6 +25,9 @@ RUN cp -r /var/www/symfony/public/* /var/www/html
 # Copie le dossier config directement dans /var/www pour que le chemin soit correct
 RUN cp -r /var/www/symfony/config /var/www/config
 
+# Copie le répertoire vendor
+COPY ./vendor /var/www/vendor
+
 # Crée les répertoires var dans /var/www/symfony et /var/www/html (si nécessaire)
 RUN mkdir -p /var/www/symfony/var /var/www/html/var
 
