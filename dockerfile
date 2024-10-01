@@ -26,7 +26,7 @@ RUN cp -r /var/www/symfony/public/* /var/www/html
 RUN cp -r /var/www/symfony/config /var/www/config
 
 # Crée les répertoires var dans /var/www/symfony et /var/www/html (si nécessaire)
-RUN mkdir -p /var/www/symfony/var /var/www/html/var
+RUN mkdir -p /var/www/symfony/var /var/www/html/var /var/www/src
 
 # Définit le répertoire de travail dans le projet Symfony
 WORKDIR /var/www/symfony
