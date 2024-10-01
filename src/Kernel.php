@@ -10,7 +10,8 @@ class Kernel extends BaseKernel
 {
     public function registerBundles(): iterable
     {
-        $contents = require $this->getProjectDir().'/config/bundles.php';
+        // Utilisation du chemin absolu pour s'assurer que le fichier est trouvé
+        $contents = require __DIR__.'/../config/bundles.php';
         foreach ($contents as $class => $envs) {
             if ($envs[$this->environment] ?? $envs['all'] ?? false) {
                 yield new $class();
