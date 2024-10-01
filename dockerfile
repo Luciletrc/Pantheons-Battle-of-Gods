@@ -28,6 +28,9 @@ RUN cp -r /var/www/symfony/config /var/www/config
 # Copie le répertoire vendor
 COPY ./vendor /var/www/vendor
 
+# Copie le fichier .env
+COPY .env /var/www/.env
+
 # Crée les répertoires var dans /var/www/symfony et /var/www/html (si nécessaire)
 RUN mkdir -p /var/www/symfony/var /var/www/html/var
 
@@ -43,9 +46,10 @@ RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-interaction --optimize-auto
 # Crée les sous-répertoires cache et log dans var si nécessaire
 RUN mkdir -p /var/www/symfony/var/cache /var/www/symfony/var/log /var/www/html/var
 
-# Définit les permissions pour le dossier cache, logs, vendor, templates, et var
-RUN chown -R www-data:www-data /var/www/symfony/var /var/www/symfony/vendor /var/www/symfony/templates /var/www/html/var /var/www/config
+# Définit les permissions pour le dossier cache, logs, vendor, templates, var et .env
+RUN chown -R www-data:www-data /var/www/symfony/var /var/www/symfony/vendor /var/www/symfony/templates /var/www/html/var /var/www/config /var/www/.env
 RUN chmod -R 775 /var/www/symfony/var /var/www/symfony/vendor /var/www/symfony/templates /var/www/html/var /var/www/config
+RUN chmod 644 /var/www/.env
 
 # Expose le port 80 pour Apache
 EXPOSE 80
