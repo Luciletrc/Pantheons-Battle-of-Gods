@@ -16,11 +16,17 @@ RUN a2enmod rewrite
 # Ajoutez une configuration Apache pour Symfony
 COPY ./000-default.conf /etc/apache2/sites-available/000-default.conf
 
-# Copie uniquement le répertoire public vers la racine Apache
-COPY ./public /var/www/html
-
-# Copie tout le projet dans le conteneur pour accéder aux fichiers de configuration
+# Copie tout le projet dans le répertoire de travail du conteneur
 COPY . /var/www/symfony
+
+# Copie uniquement le répertoire public vers la racine du serveur Apache
+RUN cp -r /var/www/symfony/public /var/www/html
+
+# Copie le répertoire templates dans le répertoire Symfony
+RUN cp -r /var/www/symfony/templates /var/www/symfony/templates
+
+# Crée les répertoires var dans /var/www/symfony et /var/www/html (si nécessaire)
+RUN mkdir -p /var/www/symfony/var /var/www/html/var
 
 # Définit le répertoire de travail dans le projet Symfony
 WORKDIR /var/www/symfony
@@ -28,18 +34,15 @@ WORKDIR /var/www/symfony
 # Installe Composer
 COPY --from=composer:2.4 /usr/bin/composer /usr/bin/composer
 
-# Crée manuellement le dossier vendor si nécessaire
-RUN mkdir -p /var/www/symfony/vendor
-
 # Installe les dépendances PHP avec Composer
 RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-interaction --optimize-autoloader --no-dev
 
-# Crée le répertoire var/cache et var/logs si nécessaire
-RUN mkdir -p /var/www/symfony/var/cache /var/www/symfony/var/log
+# Crée les sous-répertoires cache et log dans var si nécessaire
+RUN mkdir -p /var/www/symfony/var/cache /var/www/symfony/var/log /var/www/html/var
 
-# Définit les permissions pour le dossier cache, logs et vendor
-RUN chown -R www-data:www-data /var/www/symfony/var /var/www/symfony/vendor
-RUN chmod -R 775 /var/www/symfony/var /var/www/symfony/vendor
+# Définit les permissions pour le dossier cache, logs, vendor, templates, et var
+RUN chown -R www-data:www-data /var/www/symfony/var /var/www/symfony/vendor /var/www/symfony/templates /var/www/html/var
+RUN chmod -R 775 /var/www/symfony/var /var/www/symfony/vendor /var/www/symfony/templates /var/www/html/var
 
 # Expose le port 80 pour Apache
 EXPOSE 80
