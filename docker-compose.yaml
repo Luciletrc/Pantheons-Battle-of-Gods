@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/symfony
+    environment:
+      - APP_ENV=prod
+      - APP_SECRET=a91f53f9c90ab0ffd1fd510a2d96eac9
