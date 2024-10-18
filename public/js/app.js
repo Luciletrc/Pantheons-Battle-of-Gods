@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const footer = document.getElementById('slider');
+    const slider = document.getElementById('slider');
     const body = document.body;
 
     window.addEventListener('scroll', function() {
-        const footerRect = footer.getBoundingClientRect();
+        const sliderRect = slider.getBoundingClientRect();
 
-        // Vérifie si le haut du footer est hors de la vue
-        if (footerRect.top < window.innerHeight) {
-            body.classList.add('no-scroll'); // Bloque le défilement
+        // Vérifie si le bas de la fenêtre est au-dessus du haut du footer
+        if (sliderRect.top < window.innerHeight && sliderRect.bottom > 0) {
+            body.style.overflow = 'hidden'; // Bloque le défilement
         } else {
-            body.classList.remove('no-scroll'); // Réactive le défilement
+            body.style.overflow = 'auto'; // Réactive le défilement
         }
     });
 });
@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
 
 
 const containerEl = document.querySelector(".container");
