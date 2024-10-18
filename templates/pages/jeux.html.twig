@@ -1,0 +1,40 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}Découvrir le jeu{% endblock %}
+
+{% block body %}
+    <div class="banniere">
+        <div class="banniere-content" style="font-size: 80px;">
+            DÉCOUVRIR LE JEU
+        </div>
+    </div>
+
+  <div class="container container-info">
+    <p>PANTHEONS - BATTLE OF GODS™ est un jeu de cartes tactique et stratégique pour deux joueurs, dans lequel ceux-ci incarnent les dieux d'un Panthéon mythologique de leur choix. Tous les Panthéons du jeu sont conçus pour pouvoir s'affronter les uns avec les autres.</p>
+    <p>Les joueurs choisissent secrètement les trois Dieux qui participent à la bataille, puis les activent à tour de rôle par le biais de cartes Actions et de Pouvoirs spécifiques. Les cartes Actions -au nombre de douze- sont identiques pour les deux joueurs. Elles représentent les interactions communes des Dieux (se déplacer, attaquer, se soigner ou encore lancer un sort etc.)</p>
+    <img class="img-fluid py-4" src="/ressources/brand/simulation-partie.png" alt="partie en cours" style="width: 500px;">
+    <p>Les Pouvoirs sont des capacités uniques, propres à chaque Dieu et spécifiques à chaque Panthéon. C'est grâce à d'astucieuses combinaisons de ces cartes et de ces Pouvoirs, que les joueurs parviennent à remporter la victoire, en éliminant les trois Dieux du Panthéon adverse.</p>
+    <div class="text-center py-5">
+      <a class="bouton link-underline link-underline-opacity-0" href="/pantheons">Découvrir les Panthéons</a>
+    </div>
+    <img class="img-fluid py-4" src="/ressources/icons/Séparateur blanc.png" alt="séparateur"/>
+    <p>A l'heure actuelle, PANTHEONS - BATTLE OF GODS™ propose quatre Panthéons jouables (Grec, Mésopotamien, Egyptien et Slave) et prochainement de nombreux autres, avec leurs propres mécanismes de jeu et fonctionnalités uniques</p>
+    <p class="text-center pt-5">Il existe également deux modes de jeu :</p>
+  </div>
+
+  <div class="container modedejeu">
+    <div class="card card1">
+      <div class="card-info">
+        <p class="title">Un mode conçu pour se familiariser avec les règles, les cartes et le fonctionnement général du jeu. Dans ce mode, les joueurs commence la partie avec seulement six des douze cartes Actions, et en génèrent de nouvelles au fur et à mesure. Il s'agit d'une version « allégée » du jeu, idéale pour le découvrir ou le redécouvrir.</p>
+      </div>
+    </div>
+    
+    <div class="card card2">
+      <div class="card-info">
+        <p class="title">C'est la version complète du jeu qui prend en compte l'ensemble de ses règles. Ce mode nécessite d'être déjà familiarisé avec le jeu, et est donc plutôt recommandé pour des joueurs qui ont déjà disputé une à plusieurs parties, ou qui aime disposer de toute l'envergure des possibilités proposées.</p>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

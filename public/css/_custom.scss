@@ -9,25 +9,6 @@ $black:#2B3A73;
 $danger:#2B3A73;
 $font-family-serif: "Georgia", serif !default;
 
-@font-face {
-    font-family: "Dalek";
-    src: local("Dalek") url(../fonts/DALEK.TTF) format('truetype');
-}
-
-@font-face {
-    font-family: "Egyptian";
-    src: local("Egyptian") url(../fonts/EGYPTIAN.otf) format('opentype');
-}
-
-@font-face {
-    font-family: "Slave";
-    src: local("Slave") url(../fonts/SLAVE.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: "Meso";
-    src: local("Meso") url(../fonts/MESO.ttf) format('truetype');
-}
 
 @import "/node_modules/bootstrap/scss/bootstrap";
 
