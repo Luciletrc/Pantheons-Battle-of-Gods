@@ -1,3 +1,37 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const footer = document.getElementById('slider');
+    const body = document.body;
+
+    window.addEventListener('scroll', function() {
+        const footerRect = footer.getBoundingClientRect();
+
+        // Vérifie si le haut du footer est hors de la vue
+        if (footerRect.top < window.innerHeight) {
+            body.classList.add('no-scroll'); // Bloque le défilement
+        } else {
+            body.classList.remove('no-scroll'); // Réactive le défilement
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const footer = document.getElementById('footer');
+    const body = document.body;
+
+    window.addEventListener('scroll', function() {
+        const footerRect = footer.getBoundingClientRect();
+
+        // Vérifie si le bas de la fenêtre est au-dessus du haut du footer
+        if (footerRect.top < window.innerHeight && footerRect.bottom > 0) {
+            body.style.overflow = 'hidden'; // Bloque le défilement
+        } else {
+            body.style.overflow = 'auto'; // Réactive le défilement
+        }
+    });
+});
+
+
+
 const containerEl = document.querySelector(".container");
 const canvasEl = document.querySelector("canvas#neuro");
 const devicePixelRatio = Math.min(window.devicePixelRatio, 2);

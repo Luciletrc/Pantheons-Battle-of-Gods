@@ -78,6 +78,11 @@ header .text-center {
   justify-content: center; /* Centre le logo */
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100vh; /* Ou une autre hauteur selon le besoin */
+}
+
 main {
   margin-bottom: 300px;
   z-index: 1;
@@ -818,6 +823,12 @@ summary::-webkit-details-marker {
 
 .card:hover .title {
   opacity: 1; /* Afficher le titre au survol */
+}
+
+.game-discover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modedejeu {

@@ -75,11 +75,16 @@ class FrontController extends AbstractController
     {
         return $this->render('pages/actualites.html.twig');
     }
-    
 
     #[Route('/jeux', name: 'app_jeux', defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
     public function jeux(): Response
     {
         return $this->render('pages/jeux.html.twig');
+    }
+
+    #[Route('/mentionslegales', name: 'app_mentions', defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
+    public function mentions(): Response
+    {
+        return $this->render('pages/mentionslegales.html.twig');
     }
 }
