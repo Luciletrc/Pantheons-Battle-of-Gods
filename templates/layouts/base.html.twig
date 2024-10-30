@@ -177,11 +177,12 @@
 		{% block footer %}
 			{% if app.request.pathinfo != '/' %}
 				<footer class="bg-black text-white text-center footer" style="--bs-bg-opacity: .3;" id="footer">
-					<div class="container-fluid">
+					<div class="container-fluid p-2" style="display: flex; align-items: center; justify-content: space-between;">
 						<a class="footer-brand link-offset-2 link-underline link-underline-opacity-0" href="/"><img class="img-fluid" src="/ressources/brand/ekuaede" alt="Logo" width="80" height="80">Ekuaedé Editions ©</a>
-					</div>
-					<div class="mentions-legales">
-						<a class="link-offset-2 link-underline link-underline-opacity-25" href="/mentionslegales">Mentions légales</a>
+						<div class="mentions-legales pe-4">
+							<a class="link-underline-light pe-4" href="/mentionslegales">Mentions légales</a>
+							<a class="link-underline-light" href="/cgu">Conditions générales</a>
+						</div>
 					</div>
 				</footer>
 			{% endif %}

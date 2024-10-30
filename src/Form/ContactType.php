@@ -71,7 +71,7 @@ class ContactType extends AbstractType
             ])
             ->add('submit', SubmitType::class, [
                 'attr' => [
-                    'class' => 'btn text-center text-white'
+                    'class' => 'btn text-center text-white border'
                 ],
                 'label' => 'Envoyer'
             ])
