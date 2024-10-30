@@ -1,6 +1,6 @@
 {
     "name": "symfony/webpack-encore-bundle",
-    "description": "Integration with your Symfony app & Webpack Encore!",
+    "description": "Integration of your Symfony app with Webpack Encore",
     "license": "MIT",
     "type": "symfony-bundle",
     "authors": [
@@ -19,6 +19,7 @@
     },
     "require-dev": {
         "symfony/framework-bundle": "^5.4 || ^6.2 || ^7.0",
+        "symfony/http-client": "^5.4 || ^6.2 || ^7.0",
         "symfony/phpunit-bridge": "^5.4 || ^6.2 || ^7.0",
         "symfony/twig-bundle": "^5.4 || ^6.2 || ^7.0",
         "symfony/web-link": "^5.4 || ^6.2 || ^7.0"

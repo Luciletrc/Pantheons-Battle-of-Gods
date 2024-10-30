@@ -39,12 +39,13 @@
         <service id="webpack_encore.entrypoint_lookup.cache_warmer" class="Symfony\WebpackEncoreBundle\CacheWarmer\EntrypointCacheWarmer">
             <tag name="kernel.cache_warmer" />
             <argument /> <!-- build list of entrypoint paths -->
-            <argument>%kernel.cache_dir%/webpack_encore.cache.php</argument>
+            <argument type="service" id="http_client" on-invalid="null" />
+            <argument>%kernel.build_dir%/webpack_encore.cache.php</argument>
         </service>
 
         <service id="webpack_encore.cache" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
             <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create" />
-            <argument>%kernel.cache_dir%/webpack_encore.cache.php</argument>
+            <argument>%kernel.build_dir%/webpack_encore.cache.php</argument>
             <argument type="service" id="cache.webpack_encore" />
         </service>
 

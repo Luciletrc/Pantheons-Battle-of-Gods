@@ -16,12 +16,6 @@ class FrontController extends AbstractController
         ]);
     }
 
-    #[Route('/contact', name: 'app_contact', defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
-    public function contact(): Response
-    {
-        return $this->render('pages/contact.html.twig');
-    }
-
     #[Route('/pantheons', name: 'app_pantheons', defaults: ['_locale' => 'en'], requirements: ['_locale' => 'en|fr'])]
     public function pantheons(): Response
     {

@@ -52,6 +52,8 @@ file:
         # if you have multiple builds:
         # builds:
             # frontend: '%kernel.project_dir%/public/frontend/build'
+            # or if you use a CDN:
+            # frontend: 'https://cdn.example.com/frontend/build'
 
             # pass the build name" as the 3rd argument to the Twig functions
             # {{ encore_entry_script_tags('entry1', null, 'frontend') }}

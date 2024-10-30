@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.13.1@086b94371304750d1c673315321a55d15fc59015">
+<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+  <file src="src/Asset/EntrypointLookup.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$this->entriesData]]></code>
+    </InvalidReturnStatement>
+  </file>
   <file src="src/DependencyInjection/Configuration.php">
     <UndefinedMethod>
-      <code>children</code>
+      <code><![CDATA[children]]></code>
     </UndefinedMethod>
   </file>
 </files>
