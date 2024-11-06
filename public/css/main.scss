@@ -664,71 +664,6 @@ summary::-webkit-details-marker {
   width: 200px;
 }
 
-// Formulaire de contact
-.contact{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: min-content;
-  padding: 10px;
-  margin: auto;
-
-  .input-form{
-    width: 400px;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 5px;
-  }
-
-  .form-check{
-    font-size: 16px;
-  }
-
-  .input-form:hover[type=submit]{
-    background-color: #7BDBF4;
-    font-weight: bold;
-  }
-}
-
-.contact-form{
-  width: fit-content;
-
-  .form-control{
-    background-color: transparent;
-  }
-
-  .form-control::placeholder{
-    color: #ffffff;
-  }
-  
-  .form-check-input{
-    margin-left: auto;
-    margin-right: 15px;
-  }
-
-  .form-check-input:checked{
-    background-color: #7BDBF4;
-    border-color: #7BDBF4;
-  }
-
-  .form-check-label{
-    font-size: 18px;
-  }
-
-  .radio-form{
-    border-color: #ffffff;
-    border-radius: 10px;
-    border: solid;
-    border-width: thin;
-    margin-bottom: 15px;
-  }
-
-  button[type=submit]{
-    background-color: #7BDBF4;
-  }
-}
-
-
 .boutique{
   img{
     width: 100%;
@@ -914,6 +849,11 @@ summary::-webkit-details-marker {
   align-items: center;
   justify-content: space-evenly;
 }
+
+.form-control-responsive{
+  width: 500px;
+}
+
 
 @media (max-width: 1200px) {
   .banniere-content {

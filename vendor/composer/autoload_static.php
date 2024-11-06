@@ -14,17 +14,17 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'e8aa6e4b5a1db2f56ae794f1505391a8' => __DIR__ . '/..' . '/amphp/amp/lib/functions.php',
         '76cd0796156622033397994f25b0d8fc' => __DIR__ . '/..' . '/amphp/amp/lib/Internal/functions.php',
+        'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '89efb1254ef2d1c5d80096acd12c4098' => __DIR__ . '/..' . '/twig/twig/src/Resources/core.php',
         'ffecb95d45175fd40f75be8a23b34f90' => __DIR__ . '/..' . '/twig/twig/src/Resources/debug.php',
         'c7baa00073ee9c61edf148c51917cfb4' => __DIR__ . '/..' . '/twig/twig/src/Resources/escaper.php',
         'f844ccf1d25df8663951193c3fc307c8' => __DIR__ . '/..' . '/twig/twig/src/Resources/string_loader.php',
-        'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '6cd5651c4fef5ed6b63e8d8b8ffbf3cc' => __DIR__ . '/..' . '/amphp/byte-stream/lib/functions.php',
-        'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
+        'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         'bcb7d4fc55f4b1a7e10f5806723e9892' => __DIR__ . '/..' . '/amphp/sync/src/functions.php',
         'e187e371b30897d6dc51cac6a8c94ff6' => __DIR__ . '/..' . '/amphp/sync/src/ConcurrentIterator/functions.php',
         '8dc56fe697ca93c4b40d876df1c94584' => __DIR__ . '/..' . '/amphp/process/lib/functions.php',
@@ -34,12 +34,12 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
         '7ebf029ad4b246f1e3f66192b40a932f' => __DIR__ . '/..' . '/amphp/dns/lib/functions.php',
         'e1e8b49c332434256b5df11b0f0c2a62' => __DIR__ . '/..' . '/league/uri-parser/src/functions_include.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
-        '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
         '3d8ee50db78074a9235f0c2008c26b42' => __DIR__ . '/..' . '/amphp/http/src/functions.php',
         'd4e415514e4352172d58f02433fa50e4' => __DIR__ . '/..' . '/amphp/socket/src/functions.php',
         '1c2dcb9d6851a7abaae89f9586ddd460' => __DIR__ . '/..' . '/amphp/socket/src/Internal/functions.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
+        '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '77e5a577434e31d19d8dd6aeceac1ff4' => __DIR__ . '/..' . '/amphp/http-client/src/Internal/functions.php',
     );
@@ -142,10 +142,6 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
             'Symfony\\Bridge\\Doctrine\\' => 24,
             'SymfonyCasts\\Bundle\\VerifyEmail\\' => 32,
         ),
-        'R' => 
-        array (
-            'ReCaptcha\\' => 10,
-        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
@@ -174,7 +170,6 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
             'Knp\\Component\\' => 14,
             'Knp\\Bundle\\PaginatorBundle\\' => 27,
             'Kelunik\\Certificate\\' => 20,
-            'Karser\\Recaptcha3Bundle\\' => 24,
         ),
         'G' => 
         array (
@@ -570,10 +565,6 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
         array (
             0 => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src',
         ),
-        'ReCaptcha\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
-        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/src',
@@ -644,10 +635,6 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
         'Kelunik\\Certificate\\' => 
         array (
             0 => __DIR__ . '/..' . '/kelunik/certificate/src',
-        ),
-        'Karser\\Recaptcha3Bundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (

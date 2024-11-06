@@ -603,64 +603,6 @@ summary::-webkit-details-marker {
   width: 200px;
 }
 
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: -moz-min-content;
-  width: min-content;
-  padding: 10px;
-  margin: auto;
-}
-.contact .input-form {
-  width: 400px;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 5px;
-}
-.contact .form-check {
-  font-size: 16px;
-}
-.contact .input-form:hover[type=submit] {
-  background-color: #7BDBF4;
-  font-weight: bold;
-}
-
-.contact-form {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.contact-form .form-control {
-  background-color: transparent;
-}
-.contact-form .form-control::-moz-placeholder {
-  color: #ffffff;
-}
-.contact-form .form-control::placeholder {
-  color: #ffffff;
-}
-.contact-form .form-check-input {
-  margin-left: auto;
-  margin-right: 15px;
-}
-.contact-form .form-check-input:checked {
-  background-color: #7BDBF4;
-  border-color: #7BDBF4;
-}
-.contact-form .form-check-label {
-  font-size: 18px;
-}
-.contact-form .radio-form {
-  border-color: #ffffff;
-  border-radius: 10px;
-  border: solid;
-  border-width: thin;
-  margin-bottom: 15px;
-}
-.contact-form button[type=submit] {
-  background-color: #7BDBF4;
-}
-
 .boutique img {
   width: 100%;
 }
@@ -838,6 +780,10 @@ summary::-webkit-details-marker {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.form-control-responsive {
+  width: 500px;
 }
 
 @media (max-width: 1200px) {

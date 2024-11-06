@@ -23,6 +23,9 @@ class Contact
     #[ORM\Column(length: 180)]
     private ?string $email = null;
 
+    #[ORM\Column(length: 180)]
+    private ?string $contactReason = null;
+
     #[ORM\Column(type: Types::TEXT)]
     private ?string $message = null;
 
@@ -71,6 +74,18 @@ class Contact
     public function setEmail(string $email): static
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    public function getContactReason(): ?string
+    {
+        return $this->contactReason;
+    }
+
+    public function setContactReason(?string $contactReason): self
+    {
+        $this->contactReason = $contactReason;
 
         return $this;
     }
