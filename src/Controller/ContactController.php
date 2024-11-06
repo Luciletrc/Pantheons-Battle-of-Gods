@@ -29,7 +29,7 @@ class ContactController extends AbstractController
 
             $email = (new TemplatedEmail())
                 ->from($contact->getEmail())
-                ->to('pantheons.battleofgods@gmail.com')
+                ->to('luciletrc@gmail.com')
                 ->subject('Un nouveau message a été envoyé depuis la page Contact')
                 // path of the Twig template to render
                 ->htmlTemplate('emails/contact.html.twig')
