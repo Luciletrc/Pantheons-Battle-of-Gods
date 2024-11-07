@@ -1,0 +1,21 @@
+{
+    "name": "demokn/certbot-dns-auth",
+    "description": "Certbot DNS Auth",
+    "type": "library",
+    "require": {
+        "php": ">=8.1",
+        "symfony/console": "^6|^7",
+        "alibabacloud/sdk": "^1.8"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6|^7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Demokn\\DnsAuth\\": "src/"
+        }
+    },
+    "bin": [
+        "bin/certbot-dns-auth"
+    ]
+}

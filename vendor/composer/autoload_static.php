@@ -29,11 +29,16 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
         'e187e371b30897d6dc51cac6a8c94ff6' => __DIR__ . '/..' . '/amphp/sync/src/ConcurrentIterator/functions.php',
         '8dc56fe697ca93c4b40d876df1c94584' => __DIR__ . '/..' . '/amphp/process/lib/functions.php',
         '3da389f428d8ee50333e4391c3f45046' => __DIR__ . '/..' . '/amphp/serialization/src/functions.php',
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '2203a247e6fda86070a5e4e07aed533a' => __DIR__ . '/..' . '/symfony/clock/Resources/now.php',
         '445532134d762b3cbc25500cac266092' => __DIR__ . '/..' . '/daverandom/libdns/src/functions.php',
+        'd767e4fc2dc52fe66584ab8c6684783e' => __DIR__ . '/..' . '/adbario/php-dot-notation/src/helpers.php',
         '7ebf029ad4b246f1e3f66192b40a932f' => __DIR__ . '/..' . '/amphp/dns/lib/functions.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'e1e8b49c332434256b5df11b0f0c2a62' => __DIR__ . '/..' . '/league/uri-parser/src/functions_include.php',
+        'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '66453932bc1be9fb2f910a27947d11b6' => __DIR__ . '/..' . '/alibabacloud/client/src/Functions.php',
         '3d8ee50db78074a9235f0c2008c26b42' => __DIR__ . '/..' . '/amphp/http/src/functions.php',
         'd4e415514e4352172d58f02433fa50e4' => __DIR__ . '/..' . '/amphp/socket/src/functions.php',
         '1c2dcb9d6851a7abaae89f9586ddd460' => __DIR__ . '/..' . '/amphp/socket/src/Internal/functions.php',
@@ -49,6 +54,10 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'c' => 
+        array (
+            'clagiordano\\weblibs\\configmanager\\' => 34,
+        ),
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
@@ -57,6 +66,7 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
         array (
             'Twig\\Extra\\TwigExtraBundle\\' => 27,
             'Twig\\' => 5,
+            'TomCan\\AcmeClient\\' => 18,
         ),
         'S' => 
         array (
@@ -147,6 +157,7 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
             'Psr\\Log\\' => 8,
             'Psr\\Link\\' => 9,
             'Psr\\Http\\Message\\' => 17,
+            'Psr\\Http\\Client\\' => 16,
             'Psr\\EventDispatcher\\' => 20,
             'Psr\\Container\\' => 14,
             'Psr\\Clock\\' => 10,
@@ -171,8 +182,15 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
             'Knp\\Bundle\\PaginatorBundle\\' => 27,
             'Kelunik\\Certificate\\' => 20,
         ),
+        'J' => 
+        array (
+            'JmesPath\\' => 9,
+        ),
         'G' => 
         array (
+            'GuzzleHttp\\Psr7\\' => 16,
+            'GuzzleHttp\\Promise\\' => 19,
+            'GuzzleHttp\\' => 11,
             'GrahamCampbell\\ResultType\\' => 26,
         ),
         'E' => 
@@ -198,6 +216,7 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
             'Doctrine\\Bundle\\MigrationsBundle\\' => 33,
             'Doctrine\\Bundle\\FixturesBundle\\' => 31,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
+            'Demokn\\DnsAuth\\' => 15,
             'DeepCopy\\' => 9,
         ),
         'C' => 
@@ -219,6 +238,10 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
             'Amp\\Cache\\' => 10,
             'Amp\\ByteStream\\' => 15,
             'Amp\\' => 4,
+            'AlibabaCloud\\Client\\' => 20,
+            'AlibabaCloud\\' => 13,
+            'Adbar\\' => 6,
+            'AcmePhp\\Ssl\\' => 12,
         ),
     );
 
@@ -228,6 +251,10 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'clagiordano\\weblibs\\configmanager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/clagiordano/weblibs-configmanager/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -240,6 +267,10 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'TomCan\\AcmeClient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tomcan/acmeclient/src',
         ),
         'Symfony\\WebpackEncoreBundle\\' => 
         array (
@@ -578,6 +609,10 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
             0 => __DIR__ . '/..' . '/psr/http-factory/src',
             1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
+        'Psr\\Http\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-client/src',
+        ),
         'Psr\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/event-dispatcher/src',
@@ -635,6 +670,22 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
         'Kelunik\\Certificate\\' => 
         array (
             0 => __DIR__ . '/..' . '/kelunik/certificate/src',
+        ),
+        'JmesPath\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mtdowling/jmespath.php/src',
+        ),
+        'GuzzleHttp\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'GuzzleHttp\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
+        ),
+        'GuzzleHttp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (
@@ -712,6 +763,10 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-bundle/src',
         ),
+        'Demokn\\DnsAuth\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/demokn/certbot-dns-auth/src',
+        ),
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
@@ -772,6 +827,22 @@ class ComposerStaticInitc6c3048122b9d922cf2c77950360f61d
         'Amp\\' => 
         array (
             0 => __DIR__ . '/..' . '/amphp/amp/lib',
+        ),
+        'AlibabaCloud\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/alibabacloud/client/src',
+        ),
+        'AlibabaCloud\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/alibabacloud/sdk/src',
+        ),
+        'Adbar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/adbario/php-dot-notation/src',
+        ),
+        'AcmePhp\\Ssl\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/acmephp/ssl',
         ),
     );
 

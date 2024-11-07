@@ -35,7 +35,10 @@
         "symfony/polyfill-php72": "^1.31",
         "symfony/google-mailer": "^7.1",
         "doctrine/migrations": "^3.8",
-        "doctrine/doctrine-bundle": "^2.13"
+        "doctrine/doctrine-bundle": "^2.13",
+        "demokn/certbot-dns-auth": "^2.0",
+        "tomcan/acmeclient": "^2.2",
+        "acmephp/ssl": "^2.1"
     },
     "config": {
         "allow-plugins": {
