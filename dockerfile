@@ -8,7 +8,14 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     git \
     unzip \
+    ca-certificates \
     && docker-php-ext-install intl opcache pdo pdo_mysql pdo_pgsql
+
+# Télécharge le certificat SSL de Render
+RUN curl -o /usr/local/share/ca-certificates/render-ca.crt https://www.render.com/docs/databases/ssl
+
+# Met à jour les certificats CA dans le conteneur
+RUN update-ca-certificates
 
 # Active le module Apache rewrite pour gérer les routes Symfony
 RUN a2enmod rewrite
