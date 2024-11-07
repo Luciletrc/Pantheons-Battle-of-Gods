@@ -12,8 +12,11 @@ RUN apt-get update && apt-get install -y \
     curl \
     && docker-php-ext-install intl opcache pdo pdo_mysql pdo_pgsql
 
-# Télécharge le certificat SSL de Render et le place dans le répertoire où PostgreSQL attend le fichier root.crt
-RUN curl -o /var/www/.postgresql/root.crt https://cdn.render.com/ssl/render-ca.pem
+# Crée le répertoire pour le certificat SSL
+RUN mkdir -p /var/www/.postgresql
+
+# Copie le certificat SSL de Render téléchargé localement dans le répertoire approprié
+COPY ./certs/render-ca.pem /var/www/.postgresql/root.crt
 
 # Met à jour les certificats CA dans le conteneur
 RUN update-ca-certificates
