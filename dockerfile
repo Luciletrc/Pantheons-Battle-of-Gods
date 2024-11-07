@@ -15,8 +15,8 @@ RUN apt-get update && apt-get install -y \
 # Crée le répertoire pour le certificat SSL
 RUN mkdir -p /var/www/.postgresql
 
-# Copie le certificat SSL de Render téléchargé localement dans le répertoire approprié
-COPY ./certs/render-ca.pem /var/www/.postgresql/root.crt
+# Télécharge le certificat SSL de Render directement dans le répertoire approprié
+RUN curl -o /var/www/.postgresql/root.crt https://cdn.render.com/ssl/render-ca.pem
 
 # Met à jour les certificats CA dans le conteneur
 RUN update-ca-certificates
