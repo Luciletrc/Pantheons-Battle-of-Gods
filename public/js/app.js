@@ -5,11 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const sliderRect = slider.getBoundingClientRect();
 
-        // Vérifie si le bas de la fenêtre est au-dessus du haut du footer
         if (sliderRect.top < window.innerHeight && sliderRect.bottom > 0) {
-            body.style.overflow = 'hidden'; // Bloque le défilement
+            body.style.overflow = 'hidden';
         } else {
-            body.style.overflow = 'auto'; // Réactive le défilement
+            body.style.overflow = 'auto';
         }
     });
 });
@@ -21,11 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const footerRect = footer.getBoundingClientRect();
 
-        // Vérifie si le bas de la fenêtre est au-dessus du haut du footer
         if (footerRect.top < window.innerHeight && footerRect.bottom > 0) {
-            body.style.overflow = 'hidden'; // Bloque le défilement
+            body.style.overflow = 'hidden';
         } else {
-            body.style.overflow = 'auto'; // Réactive le défilement
+            body.style.overflow = 'auto';
         }
     });
 });
