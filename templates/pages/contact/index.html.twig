@@ -1,18 +1,18 @@
 {% extends 'layouts/base.html.twig' %}
 
-{% block title %}Contact{% endblock %}
+{% block title %}{{ 'Contact'|escape }}{% endblock %}
 
 {% block body %}
 
     {% for message in app.flashes('success') %}
         <div class="alert alert-success mt-4">
-            {{ message }}
+            {{ message|escape }}
         </div>
     {% endfor %}
 
     <div class="banniere">
         <div class="banniere-content">
-            CONTACT
+            {{ 'CONTACT'|escape }}
         </div>
     </div>
 
